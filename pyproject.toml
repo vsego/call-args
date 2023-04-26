@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "call-args"
+description = "Call functions and create objects by easily assigning values of keyword arguments from some object's attributes of or items from some dictionary."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name="Vedran Sego", email = "vsego@vsego.org" },
+]
+license = "MIT"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Typing :: Typed",
+]
+keywords = []
+dynamic = ["version"]
+dependencies = [
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vsego/call-args"
+"Bug Tracker" = "https://github.com/vsego/call-args/issues"
+"Changelog" = "https://github.com/vsego/call-args/blob/master/CHANGELOG.md"
+
+[tool]
+
+[tool.hatch.version]
+path = "src/call_args/version.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/call_args"]
